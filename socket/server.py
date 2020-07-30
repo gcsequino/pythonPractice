@@ -32,7 +32,9 @@ while True:
     print('Got connection from', addr)
 
     # Send a thank you message to the client
-    c.send('Hello client! Thank you for connecting')
+    msg = 'Hello client! Thank you for connecting.\n'
+    byt = msg.encode()
+    c.send(byt)
 
     # Close the connection with the client
     c.close()
